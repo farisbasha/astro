@@ -1,5 +1,17 @@
 # astro
 
+## 7.4.13
+
+### Patch Changes
+
+- [#18536](https://github.com/withastro/astro/pull/18536) [`d044365`](https://github.com/withastro/astro/commit/d04436561ab1cc214a92f9a06b6f1c669865ed13) Thanks [@KoenRijpstra](https://github.com/KoenRijpstra)! - Fixes server bundles including every renderable content collection entry when no server-rendered route calls `render()` from `astro:content`
+
+- [#18660](https://github.com/withastro/astro/pull/18660) [`75ac226`](https://github.com/withastro/astro/commit/75ac226035c5fccf5fcc0c69e07cebba1dda7ad7) Thanks [@NetBr3ak](https://github.com/NetBr3ak)! - Fixes `<Font preload>` emitting no preload links when a requested weight range such as `"400 700"` sits inside a variable font file's range such as `"400 900"`
+
+- [#18658](https://github.com/withastro/astro/pull/18658) [`33c931e`](https://github.com/withastro/astro/commit/33c931ef1d594508fe9ed8e2a98d41bec36c6abf) Thanks [@hood](https://github.com/hood)! - Improves startup time of every `astro` command for projects that don't configure `fonts`, by loading the font resolution dependencies only when fonts are used
+
+- [#18711](https://github.com/withastro/astro/pull/18711) [`bf5a170`](https://github.com/withastro/astro/commit/bf5a17080454d2696e2cd40cc7e03a76d73efc57) Thanks [@astro-factory](https://github.com/apps/astro-factory)! - Fixes the dev server blocking cross-origin requests from an origin allowed by a `security.allowedDomains` entry with a default `port`, such as `{ hostname: 'staging.myapp.com', protocol: 'https', port: '443' }`. `BaseApp.validateForwardedHost()` now applies the same `allowedDomains` rules as the rest of Astro.
+
 ## 7.4.12
 
 ### Patch Changes
